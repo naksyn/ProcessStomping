@@ -5,7 +5,7 @@ A variation of ProcessOverwriting to execute shellcode on an executable's sectio
 
 # What is it
 
-For a more detailed explanation you can read my [blog post]()
+For a more detailed explanation you can read my [blog post](https://www.naksyn.com/edr%20evasion/2023/11/18/mockingjay-revisited-process-stomping-srdi-beacon.html)
 
 Process Stomping, is a variation of [hasherezade’s Process Overwriting](https://github.com/hasherezade/process_overwriting) and it has the advantage of writing a shellcode payload on a targeted section instead of writing a whole PE payload over the hosting process address space.
 
@@ -18,7 +18,8 @@ These are the main steps of the ProcessStomping technique:
 
 As an example application of the technique, the PoC can be used with [sRDI](https://github.com/monoxgas/sRDI) to load a beacon dll over an executable RWX section. The following picture describes the steps involved.
 
-![immagine](https://github.com/naksyn/ProcessStomping/assets/59816245/52a8baa6-87e8-4767-9f6d-5f17c3f05761)
+![immagine](https://github.com/naksyn/ProcessStomping/assets/59816245/cbc488c4-79ef-4779-9373-8f137b8e97f1)
+
 
 
 # Disclaimer
@@ -55,6 +56,10 @@ The sRDI blob will get erased after execution to remove unneeded artifacts.
 
 
 ### Demo
+
+
+
+https://github.com/naksyn/ProcessStomping/assets/59816245/8d9e1ac2-b47c-41d5-9f0e-1b3fee14ba50
 
 
 
