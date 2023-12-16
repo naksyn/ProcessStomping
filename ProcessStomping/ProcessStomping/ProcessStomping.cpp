@@ -238,7 +238,8 @@ int main()
 		Wow64SetThreadContext(pi->hThread, &context32);
 	}
 	else {
-		GetThreadContext(pi->hThread, &context);
+		// You shouldn't get the context again, it will overwrite the entry point change.
+		// GetThreadContext(pi->hThread, &context);
 		SetThreadContext(pi->hThread, &context);
 	}
 
